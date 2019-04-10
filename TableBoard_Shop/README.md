@@ -36,17 +36,49 @@ Note:
     - ex) name -> char or varchar
     
 ## index.php 수정
-[여기에 index.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
+ - mysql db 연동
+    - mysql_connect : mysql 계정 연동
+    - mysql_select_db : 계정의 db 연동
+ - mysql 쿼리 스트링 전송
+    - mysql_query
+ - 레코드 가져오기
+    - mysql_fetch_array
+ - 가져온 데이터 출력
+    - while문을 이용해 가져온 데이터 전부 echo로 출력
 ## board_form.php 수정
-[여기에 board_form.php 를 어떻게 수정했는지, 설명을 작성하세요.]
+- db 불러오기
+    - mysql_connect, mysql_select_db
+- 쿼리 스트링 전송
+    - mysql_query
+- 데이터 출력
+    - select *from tableboard_shop where num='$_GET[num]', mysql_fetch_array로 num에 해당하는 레코드 데이터 가져옴
+    - echo로 레코드값 출력
 
 ## function
 ### insert.php 수정
-[여기에 insert.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
+- db 불러오기
+    - mysql_connect, mysql_select_db
+- 값 집어넣기
+    - insert를 이용해 각 필드에 데이터 집어넣음 ($_POST를 이용해 입력받은 데이터 읽어옴)
+- 쿼리 스트링 전송
+   - mysql_query
+- 오류 메세지
+   - 쿼리 스트링 전송 false라면 오류 메세지를 출력
 ### update.php 수정
-[여기에 update.php 를 어떻게 수정했는지, 설명을 작성하세요.]
-
+- db 불러오기
+    - mysql_connect, mysql_select_db
+- 쿼리 스트링 전송
+    - mysql_query
+- 값 수정하기
+    - update를 이용해 각 필드에 데이터 집어넣음 ($_POST를 이용해 입력받은 데이터 읽어옴 / $_GET을 이용해 수정하고자 하는 레코드 지정)
+- 오류 메세지
+   - 쿼리 스트링 전송 false라면 오류 메세지를 출력
 ### delete.php 수정
-[여기에 delete.php 를 어떻게 수정했는지, 설명을 작성하세요.]
+- db 불러오기
+    - mysql_connect, mysql_select_db
+- 쿼리 스트링 전송
+    - mysql_query
+- 값 삭제하기
+    - delete를 이용해 각 필드에 데이터 집어넣음 ($_GET을 이용해 삭제하고자 하는 레코드 지정)
+- 오류 메세지
+   - 쿼리 스트링 전송 false라면 오류 메세지를 출력

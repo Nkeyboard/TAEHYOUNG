@@ -5,7 +5,7 @@ if(isset($_GET[num])) {
     $connect = mysql_connect("localhost","kth","1231");
     mysql_select_db("kth_db",$connect);
     $sql="select *from tableboard_shop where num='$_GET[num]'";
-    $result=mysql_query($sql);
+    $result=mysql_query($sql,$connect);
     $row=mysql_fetch_array($result);
 }
 ?>

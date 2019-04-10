@@ -4,6 +4,7 @@
     mysql_select_db("kth_db", $connect);
     $sql="select *from tableboard_shop;";
     $result=mysql_query($sql, $connect);
+    $row=mysql_fetch_array($result);
 ?>
 
 <!-- 출처 : https://colorlib.com/wp/template/responsive-table-v1/ -->
